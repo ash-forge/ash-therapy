@@ -324,20 +324,83 @@ See [TRAINING.md](docs/TRAINING.md) for full methodology.
 
 ---
 
+## 📊 Full Transparency
+
+**Every model release includes a complete Hugging Face model card documenting:**
+- ✅ Every training data source (with citations and direct links)
+- ✅ Data collection and filtering methodology
+- ✅ Training process and hyperparameters
+- ✅ Evaluation results (crisis detection, empathy, boundaries, bias testing)
+- ✅ Limitations and known failure modes
+- ✅ Safety considerations and harm reduction philosophy
+
+**Example:** [`ash-forge/ash-therapy-v1.0.0`](https://huggingface.co/ash-forge/ash-therapy-v1.0.0) on Hugging Face *(when released)*
+
+**Why this matters:**
+- Mental health professionals can review our methodology and suggest improvements
+- Users can verify training data quality before trusting the tool
+- Researchers can contribute better training sources
+- Anyone can report inappropriate responses
+- Full accountability for what the model says
+
+**🤝 We're actively seeking professional review.** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we need your expertise to make this better. See [docs/MODEL_CARD_TEMPLATE.md](docs/MODEL_CARD_TEMPLATE.md) for how we'll document everything.
+
+---
+
 ## Technical Details
 
-### Model
-- **Base:** Qwen2.5-3B-Instruct
-- **Specialization:** Mental health support (LoRA fine-tuned)
-- **Size:** 3GB (quantized GGUF Q4_K_M)
-- **Context:** 8K tokens (~6,000 words of conversation history)
+**Runtime:** C++17 with llama.cpp backend  
+**Model:** 3B parameter Qwen2.5-Instruct (LoRA fine-tuned)  
+**Privacy:** Network disabled by default (compile-time constant)  
+**Voice:** Whisper.cpp (speech-to-text) + Piper (text-to-speech)  
+**Storage:** No conversation history saved (RAM-only)  
+**Platforms:** Windows, macOS, Linux, iOS, Android
 
-### Runtime
-- **Engine:** ash-therapy.cpp (custom C++ inference engine)
-- **Speech:** Whisper.cpp (on-device speech recognition)
-- **TTS:** Piper (on-device text-to-speech)
-- **Platform:** Windows, macOS, Linux, iOS, Android
-- **Requirements:** 4GB RAM, 5GB storage
+---
+
+## 📊 Full Transparency on Hugging Face
+
+**Every model release includes a complete model card showing exactly what went into the training:**
+
+1. **Training Data Sources** (with citations)
+   - Every paper, textbook, manual used
+   - Direct links to source materials
+   - Institutional sources (NIMH, SAMHSA, VA, etc.)
+   
+2. **Data Collection Methodology**
+   - How sources were selected
+   - Quality filtering process
+   - What was rejected and why
+   
+3. **Training Process**
+   - Base model, LoRA config, hyperparameters
+   - Compute resources and cost
+   - Training duration
+   
+4. **Evaluation Results**
+   - Crisis detection accuracy
+   - Empathy ratings (by professionals)
+   - Boundary adherence rates
+   - Bias testing results
+   
+5. **Limitations & Known Issues**
+   - What the model gets wrong
+   - Demographic gaps
+   - When it gives bad advice
+
+**Example:** `ash-forge/ash-therapy-v1.0.0` on Hugging Face *(when released)*
+
+**Why Full Transparency Matters:**
+- ✅ Mental health professionals can review methodology and suggest improvements
+- ✅ Users can verify training data quality before trusting the tool
+- ✅ Researchers can contribute better training sources
+- ✅ Anyone can report inappropriate responses
+- ✅ Scientific progress - other projects learn from our approach
+- ✅ Full accountability if the model gives bad advice
+
+**🤝 We're actively seeking professional review.** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we need your expertise. See [docs/MODEL_CARD_TEMPLATE.md](docs/MODEL_CARD_TEMPLATE.md) for complete documentation plan.
+
+---
 
 ### Privacy Enforcement
 ```cpp

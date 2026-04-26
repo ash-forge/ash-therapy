@@ -527,6 +527,103 @@ Quality over quantity. Every example must come from validated clinical sources.
 - Ensure appropriate boundaries (no diagnosis, no medical advice)
 - Check privacy enforcement (no leaked PII)
 
+### Public Transparency (Hugging Face Model Card)
+
+**Every model release will include complete documentation on Hugging Face showing:**
+
+1. **Training Data Sources** (with citations)
+   - Every paper, textbook, manual, and protocol used
+   - Direct links to source materials
+   - Institutional sources (NIMH, SAMHSA, VA, etc.)
+   - Peer-reviewed journal articles (DOIs provided)
+   
+2. **Data Collection Methodology**
+   - How sources were selected (inclusion/exclusion criteria)
+   - Quality filtering process (what was rejected and why)
+   - Annotation process (if any human review done)
+   - Diversity considerations (age, gender, culture, conditions)
+   
+3. **Training Process**
+   - Base model used (Qwen/Qwen2.5-3B-Instruct)
+   - LoRA configuration parameters
+   - Training hyperparameters
+   - Compute resources used
+   - Training duration and cost
+   
+4. **Evaluation Results**
+   - Crisis detection accuracy (precision/recall)
+   - Empathy ratings (evaluated by professionals)
+   - Boundary adherence (% appropriate refusals)
+   - Bias testing (gender, race, age, condition type)
+   - Comparison to base model (improvements shown)
+   
+5. **Limitations & Known Issues**
+   - What the model can't do (diagnose, prescribe, treat)
+   - Known failure modes (when it gives bad advice)
+   - Demographic gaps in training data
+   - Languages supported (start with English only)
+   - Technical requirements (RAM, storage, CPU)
+   
+6. **Safety & Ethical Considerations**
+   - Crisis resource embedding (all 40+ countries)
+   - Harm reduction philosophy explained
+   - When to seek professional help (clear guidelines)
+   - Privacy architecture (network-disabled by default)
+   - Opt-in telemetry (if ever added, requires consent)
+
+**Why Full Transparency Matters:**
+- **Professional Review** - Therapists, psychologists, psychiatrists can review our approach and suggest improvements
+- **Public Trust** - Users can verify training data quality before using for mental health
+- **Community Contribution** - Researchers can identify gaps or suggest better sources
+- **Accountability** - If the model gives bad advice, we can trace it to training data and fix it
+- **Scientific Progress** - Other projects can learn from our methodology (open source includes data strategy)
+- **Legal Protection** - Clear documentation of limitations protects both users and developers
+
+**Example Model Card Section:**
+```markdown
+## Training Data Sources (ash-therapy-v1.0.0)
+
+### Clinical Foundations (152,447 examples)
+1. SAMHSA Treatment Improvement Protocols (TIPs)
+   - Source: https://store.samhsa.gov/product-type/tip
+   - Citation: Substance Abuse and Mental Health Services Administration
+   - Usage: Evidence-based treatment protocols (public domain)
+   - Examples extracted: 23,441
+   
+2. NIMH Educational Resources
+   - Source: https://www.nimh.nih.gov/health/publications
+   - Citation: National Institute of Mental Health (U.S.)
+   - Usage: Mental health condition descriptions, coping strategies
+   - Examples extracted: 18,392
+   
+[... continues for all 20+ sources with full attribution]
+```
+
+**Inviting Professional Collaboration:**
+
+The Hugging Face model card will include:
+```markdown
+## 🤝 Call for Professional Review
+
+We're seeking feedback from licensed mental health professionals:
+- Therapists (LMFT, LCSW, LPC)
+- Psychologists (PhD, PsyD)
+- Psychiatrists (MD, DO)
+- Crisis counselors
+- Social workers
+
+**How to contribute:**
+1. Review training data sources (see above)
+2. Test model conversations (test interface provided)
+3. Report inappropriate responses (GitHub Issues)
+4. Suggest additional training sources (must be peer-reviewed)
+5. Propose evaluation criteria
+
+**Contact:** therapy@ash-forge.com (monitored by maintainers)
+```
+
+This way professionals can help us make ash-therapy better BEFORE vulnerable people use it.
+
 ### Training Configuration
 ```yaml
 model: Qwen/Qwen2.5-3B-Instruct
