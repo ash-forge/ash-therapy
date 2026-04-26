@@ -131,41 +131,54 @@ We're not replacing therapy - we're meeting people where they are.
 **Size:** ~3GB quantized (GGUF Q4_K_M)
 
 ### Training Data Sources
-**High-quality, validated sources only:**
+**Only validated clinical and professional sources:**
 
-1. **Clinical Resources (Public Domain)**
-   - Cognitive Behavioral Therapy workbooks (validated protocols)
-   - DBT (Dialectical Behavior Therapy) skill guides
+1. **Clinical Treatment Protocols**
+   - Cognitive Behavioral Therapy workbooks (validated, public domain)
+   - DBT (Dialectical Behavior Therapy) skill manuals
    - SAMHSA treatment improvement protocols
-   - NAMI educational materials
-   - Peer-reviewed psychology papers
+   - NAMI educational and training materials
+   - Evidence-based therapy technique guides
 
 2. **Professional Training Materials**
-   - Crisis counselor training manuals (public versions)
-   - Active listening training guides
-   - Motivational interviewing techniques
-   - Trauma-informed care principles
+   - Crisis counselor training manuals (official programs)
+   - Active listening training guides (from clinical programs)
+   - Motivational interviewing training materials
+   - Trauma-informed care training protocols
+   - Mental health first aid training content
 
-3. **Synthetic Conversations (Generated & Validated)**
-   - Use GPT-4/Claude to generate therapy-style dialogues
-   - Prompt: "You are a supportive, non-judgmental mental health peer supporter..."
-   - Cover: depression, anxiety, trauma, grief, relationships
-   - **Critical: Review by mental health professionals before inclusion**
-   - Validate for empathy, boundaries, appropriate responses
+3. **Academic & Research Sources**
+   - Peer-reviewed psychology and psychiatry papers
+   - Clinical case studies (anonymized, published)
+   - Validated therapeutic conversation frameworks
+   - Evidence-based intervention protocols
 
-4. **Structured Mental Health Content**
-   - Guided meditation scripts (validated sources)
-   - Mindfulness exercises (MBSR, MBCT protocols)
-   - Breathing techniques (clinical sources)
-   - Grounding exercises (trauma therapy literature)
+4. **Structured Therapeutic Content**
+   - Guided meditation scripts (from clinical MBSR/MBCT programs)
+   - Mindfulness exercises (validated therapeutic protocols)
+   - Breathing techniques (anxiety treatment literature)
+   - Grounding exercises (trauma therapy clinical guides)
+
+5. **Crisis Intervention Resources**
+   - Crisis hotline training materials (official programs)
+   - Suicide prevention protocols (clinical guidelines)
+   - Safety planning frameworks (clinical best practices)
+   - De-escalation techniques (professional training)
+
+**Quality Requirements:**
+- ✅ Published by recognized mental health organizations
+- ✅ Evidence-based (peer-reviewed or clinically validated)
+- ✅ Used in professional training programs
+- ✅ Publicly available or licensed for use
+- ✅ No personally identifiable information
 
 **Explicitly Excluded:**
-- ❌ Reddit or other social media (unreliable advice)
+- ❌ Synthetic AI-generated conversations (no clinical validation)
+- ❌ Social media posts (Reddit, Twitter, forums)
+- ❌ Unverified online content
 - ❌ Private therapy session transcripts
-- ❌ Medical records
-- ❌ Personally identifiable information
-- ❌ Unverified online forums
-- ❌ Copyrighted therapeutic materials
+- ❌ Medical records or patient data
+- ❌ Copyrighted therapeutic materials without permission
 
 ### Privacy Enforcement (Code Level)
 
@@ -457,38 +470,47 @@ situations need professional intervention.
 
 ### Data Collection Strategy
 
-**Phase 1: Foundation (200K samples)**
-- CBT/DBT workbooks and validated protocols
+### Dataset Size Target
+**300,000 - 500,000 examples** (lower than ash-python, but higher quality threshold)
+
+Quality over quantity. Every example must come from validated clinical sources.
+
+### Data Collection Strategy
+
+**Phase 1: Clinical Foundations (150K samples)**
+- CBT/DBT treatment manuals and workbooks
 - SAMHSA treatment improvement protocols
-- NAMI educational materials
-- Clinical psychology research papers
-- Crisis intervention protocols (professional training)
+- NAMI training materials
+- Clinical psychology textbooks (therapeutic dialogue examples)
+- Evidence-based therapy technique demonstrations
 
-**Phase 2: Conversational (300K samples)**
-- Synthetic therapy dialogues (GPT-4/Claude generated, professionally reviewed)
-- Active listening training examples
-- Empathy and validation techniques
-- Motivational interviewing transcripts
+**Phase 2: Professional Training (100K samples)**
+- Crisis counselor certification programs
+- Active listening training curricula
+- Motivational interviewing training materials
+- Mental health first aid course content
+- Trauma-informed care training protocols
 
-**Phase 3: Specialized (200K samples)**
-- Depression-specific support (clinical sources)
-- Anxiety management techniques (validated protocols)
-- Grief and loss conversations (bereavement literature)
-- Relationship issues (couples therapy frameworks)
-- Trauma-informed approaches (EMDR, somatic therapy literature)
+**Phase 3: Specialized Protocols (100K samples)**
+- Depression treatment protocols (clinical)
+- Anxiety disorder treatment guides (evidence-based)
+- Grief counseling frameworks (bereavement therapy)
+- PTSD treatment protocols (trauma therapy)
+- Relationship therapy frameworks (couples/family therapy)
 
-**Phase 4: Crisis & Safety (100K samples)**
-- Crisis counselor training materials
-- Safety planning conversations (clinical protocols)
-- De-escalation techniques (professional training)
-- Appropriate resource referrals
+**Phase 4: Crisis & Safety (50K samples)**
+- Crisis hotline training materials (official programs)
+- Suicide prevention protocols (clinical guidelines)
+- Safety planning clinical frameworks
+- De-escalation training (professional certification)
+- Emergency response protocols
 
-**Phase 5: Boundaries (200K samples)**
-- Examples where model says "I can't help with that"
-- Medical questions → "See a doctor"
-- Medication questions → "Talk to your psychiatrist"
-- Diagnosis attempts → "Only professionals can diagnose"
-- Harmful requests → Refusal with crisis resources
+**Phase 5: Boundaries & Limitations (50K samples)**
+- Examples of appropriate refusals ("I can't diagnose")
+- Medical referrals ("Please see a doctor")
+- Medication questions ("Talk to your psychiatrist")
+- Scope limitation demonstrations ("I'm here to listen, not treat")
+- Harmful request refusals (with crisis resource offering)
 
 ### Quality Validation
 - Review sample conversations with mental health professionals
