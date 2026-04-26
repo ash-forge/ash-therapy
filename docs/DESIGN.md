@@ -153,13 +153,21 @@ We're not replacing therapy - we're meeting people where they are.
    - Validated therapeutic conversation frameworks
    - Evidence-based intervention protocols
 
-4. **Structured Therapeutic Content**
+4. **Internet Archive (archive.org)**
+   - Public domain psychology textbooks
+   - Historical psychiatric treatment manuals
+   - Clinical therapy guides (out of copyright)
+   - Mental health education materials
+   - Published therapeutic case studies
+   - **Huge collection of legitimate clinical literature**
+
+5. **Structured Therapeutic Content**
    - Guided meditation scripts (from clinical MBSR/MBCT programs)
    - Mindfulness exercises (validated therapeutic protocols)
    - Breathing techniques (anxiety treatment literature)
    - Grounding exercises (trauma therapy clinical guides)
 
-5. **Crisis Intervention Resources**
+6. **Crisis Intervention Resources**
    - Crisis hotline training materials (official programs)
    - Suicide prevention protocols (clinical guidelines)
    - Safety planning frameworks (clinical best practices)
