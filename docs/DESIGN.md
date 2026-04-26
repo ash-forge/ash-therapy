@@ -131,31 +131,41 @@ We're not replacing therapy - we're meeting people where they are.
 **Size:** ~3GB quantized (GGUF Q4_K_M)
 
 ### Training Data Sources
-**High-quality, ethical sources only:**
+**High-quality, validated sources only:**
 
-1. **Public CBT Resources**
-   - Cognitive Behavioral Therapy workbooks (public domain)
+1. **Clinical Resources (Public Domain)**
+   - Cognitive Behavioral Therapy workbooks (validated protocols)
    - DBT (Dialectical Behavior Therapy) skill guides
-   - Mindfulness and meditation transcripts
+   - SAMHSA treatment improvement protocols
+   - NAMI educational materials
    - Peer-reviewed psychology papers
 
-2. **Support Community Data**
-   - r/mentalhealth, r/depression (public posts, anonymized)
-   - 7 Cups transcripts (if available/permitted)
-   - Crisis hotline training materials (public versions)
-   - Mental health advocacy organization guides
+2. **Professional Training Materials**
+   - Crisis counselor training manuals (public versions)
+   - Active listening training guides
+   - Motivational interviewing techniques
+   - Trauma-informed care principles
 
-3. **Synthetic Conversations**
+3. **Synthetic Conversations (Generated & Validated)**
    - Use GPT-4/Claude to generate therapy-style dialogues
-   - Prompt: "You are a non-judgmental mental health supporter..."
+   - Prompt: "You are a supportive, non-judgmental mental health peer supporter..."
    - Cover: depression, anxiety, trauma, grief, relationships
-   - Validate with mental health professionals if possible
+   - **Critical: Review by mental health professionals before inclusion**
+   - Validate for empathy, boundaries, appropriate responses
 
-**Ethical Filtering:**
-- No personally identifiable information
-- No harmful advice (self-harm, suicide methods)
-- No medical diagnoses or medication recommendations
-- Clear boundaries: "I'm here to listen, not diagnose"
+4. **Structured Mental Health Content**
+   - Guided meditation scripts (validated sources)
+   - Mindfulness exercises (MBSR, MBCT protocols)
+   - Breathing techniques (clinical sources)
+   - Grounding exercises (trauma therapy literature)
+
+**Explicitly Excluded:**
+- ❌ Reddit or other social media (unreliable advice)
+- ❌ Private therapy session transcripts
+- ❌ Medical records
+- ❌ Personally identifiable information
+- ❌ Unverified online forums
+- ❌ Copyrighted therapeutic materials
 
 ### Privacy Enforcement (Code Level)
 
@@ -448,28 +458,29 @@ situations need professional intervention.
 ### Data Collection Strategy
 
 **Phase 1: Foundation (200K samples)**
-- CBT/DBT workbooks and exercises
-- Public domain psychology resources
-- Mental health organization guides
-- Crisis intervention protocols
+- CBT/DBT workbooks and validated protocols
+- SAMHSA treatment improvement protocols
+- NAMI educational materials
+- Clinical psychology research papers
+- Crisis intervention protocols (professional training)
 
 **Phase 2: Conversational (300K samples)**
-- Synthetic therapy dialogues (GPT-4 generated)
-- Public support community posts (anonymized)
+- Synthetic therapy dialogues (GPT-4/Claude generated, professionally reviewed)
 - Active listening training examples
 - Empathy and validation techniques
+- Motivational interviewing transcripts
 
 **Phase 3: Specialized (200K samples)**
-- Depression-specific support
-- Anxiety management techniques
-- Grief and loss conversations
-- Relationship issues
-- Trauma-informed approaches (careful sourcing)
+- Depression-specific support (clinical sources)
+- Anxiety management techniques (validated protocols)
+- Grief and loss conversations (bereavement literature)
+- Relationship issues (couples therapy frameworks)
+- Trauma-informed approaches (EMDR, somatic therapy literature)
 
 **Phase 4: Crisis & Safety (100K samples)**
-- Crisis detection training
-- Safety planning conversations
-- De-escalation techniques
+- Crisis counselor training materials
+- Safety planning conversations (clinical protocols)
+- De-escalation techniques (professional training)
 - Appropriate resource referrals
 
 **Phase 5: Boundaries (200K samples)**
@@ -477,6 +488,7 @@ situations need professional intervention.
 - Medical questions → "See a doctor"
 - Medication questions → "Talk to your psychiatrist"
 - Diagnosis attempts → "Only professionals can diagnose"
+- Harmful requests → Refusal with crisis resources
 
 ### Quality Validation
 - Review sample conversations with mental health professionals
