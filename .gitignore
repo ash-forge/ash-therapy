@@ -1,0 +1,54 @@
+# Build artifacts
+build/
+dist/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+
+# Model files (large, use Git LFS or external hosting)
+model/checkpoints/*.bin
+model/checkpoints/*.gguf
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Training artifacts
+training_logs/
+outputs/
+wandb/
+
+# User data (should never be committed)
+*.log
+sessions/
+user_data/
+
+# Mobile build artifacts
+mobile/android/build/
+mobile/android/.gradle/
+mobile/ios/build/
+mobile/ios/DerivedData/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
