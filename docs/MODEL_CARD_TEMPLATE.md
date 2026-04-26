@@ -304,11 +304,11 @@ training:
 
 ---
 
-## 🤝 Call for Professional Review
+## 🤝 Professional Review Program
 
-We're actively seeking feedback from licensed mental health professionals:
+We're actively seeking feedback from licensed mental health professionals through our **Professional Review Program**.
 
-### Who We Need
+### Who Can Join
 - **Therapists:** LMFT, LCSW, LPC, LMHC
 - **Psychologists:** PhD, PsyD
 - **Psychiatrists:** MD, DO
@@ -316,21 +316,61 @@ We're actively seeking feedback from licensed mental health professionals:
 - **Social Workers:** MSW, LICSW
 - **Researchers:** Mental health, AI ethics, human-computer interaction
 
-### How to Contribute
-1. **Review training data sources** (see above) - Are we missing important sources?
-2. **Test model conversations** (test interface: https://ash-forge.com/therapy-test)
-3. **Report inappropriate responses** (GitHub Issues: github.com/ash-forge/ash-therapy/issues)
-4. **Suggest additional training sources** (must be peer-reviewed or from recognized institutions)
-5. **Propose evaluation criteria** (How should we measure empathy, safety, effectiveness?)
-6. **Join advisory board** (email therapy@ash-forge.com)
+### Credential Verification
+To ensure review quality, we verify professional credentials through:
+- **U.S.:** NPI (National Provider Identifier) lookup + state licensing board verification
+- **International:** National medical registers (GMC, AHPRA, etc.)
+- **Researchers:** Academic affiliation + ORCID verification
 
-### Collaboration Examples
-- **Training data review:** "You should include [X source] - it has excellent crisis de-escalation examples"
-- **Bias identification:** "The model responds differently to male vs. female users expressing sadness"
-- **Failure mode reporting:** "When I said [X], it gave medical advice instead of referring to a doctor"
-- **Evaluation design:** "You should test for cultural sensitivity with [X methodology]"
+**Verification takes ~24 hours and is free.**
 
-**Contact:** therapy@ash-forge.com (monitored by project maintainers)
+### What You Get Access To
+
+#### 1. Professional Testing Interface
+- 🧪 Unlimited testing (no rate limits)
+- 🎯 Pre-made edge case scenarios (crisis, boundaries, bias)
+- 📊 Internal metrics for each response (crisis confidence, empathy scores, boundary checks)
+- 📝 Annotation interface to flag inappropriate responses
+- 🔄 A/B comparison (current model vs. base model)
+
+#### 2. Training Data Review Portal
+- 📚 Browse all training sources with citations
+- 🔍 Search specific training examples
+- ✍️ Suggest additional clinical sources
+- ⚠️ Report problematic training examples
+
+#### 3. Internal Evaluation Dashboard
+- 📈 Crisis detection accuracy over time
+- 💚 Empathy ratings by professional evaluators
+- 🛡️ Boundary adherence rates
+- ⚖️ Bias testing results
+- 📉 Known failure modes and issues
+
+#### 4. Direct Communication
+- 💬 Private reviewer Slack workspace
+- 🐛 Fast-track bug reporting
+- 📞 Quarterly video calls with maintainers
+
+### Recognition
+- ✅ Public credit in model card (if you consent)
+- ✅ Co-authorship on papers (for significant contributions)
+- ✅ Continuing Education documentation
+- ✅ Can publish your own findings
+
+### How to Apply
+
+**Apply here:** https://ash-forge.com/therapy/reviewer-apply
+
+**Required information:**
+1. License type and number (LMFT #12345, PsyD, etc.)
+2. State/country of licensure
+3. NPI number (U.S. only, if applicable)
+4. Institutional email (no Gmail/Outlook)
+5. Brief description of expertise (100 words)
+
+**See full program details:** [docs/PROFESSIONAL_REVIEW_PROGRAM.md](https://github.com/ash-forge/ash-therapy/blob/main/docs/PROFESSIONAL_REVIEW_PROGRAM.md)
+
+**Contact:** therapy-review@ash-forge.com
 
 ---
 

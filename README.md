@@ -343,7 +343,7 @@ See [TRAINING.md](docs/TRAINING.md) for full methodology.
 - Anyone can report inappropriate responses
 - Full accountability for what the model says
 
-**🤝 We're actively seeking professional review.** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we need your expertise to make this better. See [docs/MODEL_CARD_TEMPLATE.md](docs/MODEL_CARD_TEMPLATE.md) for how we'll document everything.
+**🤝 Professional Review Program:** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we offer **verified professional access** to testing tools, internal metrics, and training data review. See [docs/PROFESSIONAL_REVIEW_PROGRAM.md](docs/PROFESSIONAL_REVIEW_PROGRAM.md) for details.
 
 ---
 
@@ -398,7 +398,7 @@ See [TRAINING.md](docs/TRAINING.md) for full methodology.
 - ✅ Scientific progress - other projects learn from our approach
 - ✅ Full accountability if the model gives bad advice
 
-**🤝 We're actively seeking professional review.** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we need your expertise. See [docs/MODEL_CARD_TEMPLATE.md](docs/MODEL_CARD_TEMPLATE.md) for complete documentation plan.
+**🤝 Professional Review Program:** If you're a licensed therapist, psychologist, psychiatrist, or crisis counselor, we offer **verified professional access** to testing tools, internal metrics, and training data review. [Apply here](https://ash-forge.com/therapy/reviewer-apply) or see [docs/PROFESSIONAL_REVIEW_PROGRAM.md](docs/PROFESSIONAL_REVIEW_PROGRAM.md).
 
 ---
 
